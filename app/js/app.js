@@ -12,7 +12,12 @@ monPrenom.config(['$httpProvider', function($httpProvider) {
 
 
 monPrenom.config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/randomName', {templateUrl: 'partials/random.html', controller: 'RandomNameController'});
+    $routeProvider.when('/affichePrenom/:name', {templateUrl: 'partials/affichePrenom.html', controller: 'affichePrenomController'});
     $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
     $routeProvider.otherwise({templateUrl: 'partials/home.html', controller: 'HomeController'});
   }]);
+
+
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
