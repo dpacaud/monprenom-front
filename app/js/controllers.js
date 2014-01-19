@@ -28,9 +28,6 @@ angular.module('monPrenom.controllers', []).
       $location.path( "/" );
     }
   }])
-  .controller('MyCtrl2', [function() {
-
-  }])
   .controller('HomeController', ['$scope','$http','$location',function($scope,$http,$location) {
     
     $scope.getRandomName = function(){
